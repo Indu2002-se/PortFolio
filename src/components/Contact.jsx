@@ -14,20 +14,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "buddhi@example.com",
-      link: "mailto:buddhi@example.com"
+      value: "bwithanage327@gmail.com",
+      link: "mailto:bwithanage327.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+94 724917893",
+      link: "tel:+94724917893"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
-      link: "https://maps.google.com/?q=San+Francisco,CA"
+      value: "Gampaha Srilanaka",
+      
     }
   ]
 

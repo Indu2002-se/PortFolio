@@ -3,41 +3,37 @@ import { Code2, Database, Globe, Smartphone, Server, Palette } from 'lucide-reac
 const Skills = () => {
   const skillCategories = [
     {
+      icon: Palette,
+      title: "Java Development",
+      skills: ["Java", "Java  FX", "Spring Boot", "Java Swing"],
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
       icon: Code2,
       title: "Frontend Development",
-      skills: ["React", "Vue.js", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"],
+      skills: ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"],
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Server,
       title: "Backend Development", 
-      skills: ["Node.js", "Python", "Express.js", "Django", "REST APIs", "GraphQL"],
+      skills: ["Node.js", "Java","SQL" ],
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: Database,
       title: "Database & Cloud",
-      skills: ["MongoDB", "PostgreSQL", "MySQL", "AWS", "Firebase", "Docker"],
+      skills: ["MongoDB",  "MySQL", "AWS", "Firebase", "Docker"],
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: Smartphone,
       title: "Mobile Development",
-      skills: ["React Native", "Flutter", "iOS", "Android", "Progressive Web Apps"],
+      skills: [ "Android", "Progressive Web Apps"],
       color: "from-orange-500 to-red-500"
     },
-    {
-      icon: Palette,
-      title: "Design & Tools",
-      skills: ["Figma", "Adobe XD", "Git", "VS Code", "Webpack", "Vite"],
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      icon: Globe,
-      title: "Web Technologies",
-      skills: ["WebRTC", "WebSockets", "PWA", "SEO", "Performance Optimization"],
-      color: "from-teal-500 to-blue-500"
-    }
+  
+   
   ]
 
   return (

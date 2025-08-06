@@ -45,9 +45,9 @@ const Navigation = () => {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 shadow-sm">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16">
           {/* Logo */}
           <div 
             onClick={() => scrollToSection('home')}
@@ -61,34 +61,38 @@ const Navigation = () => {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => {
-              const IconComponent = item.icon
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`flex items-center px-3 py-2 rounded-lg transition-all duration-300 ${
-                    activeSection === item.id
-                      ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400'
-                  }`}
-                >
-                  <IconComponent className="w-4 h-4 mr-2" />
-                  {item.label}
-                </button>
-              )
-            })}
+          {/* Centered Desktop Navigation */}
+          <div className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-8 bg-gray-50/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full px-6 py-2 border border-gray-200/50 dark:border-gray-700/50">
+              {navItems.map((item) => {
+                const IconComponent = item.icon
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`flex items-center px-4 py-2 rounded-full transition-all duration-300 ${
+                      activeSection === item.id
+                        ? 'text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg'
+                        : 'text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white/50 dark:hover:bg-gray-700/50'
+                    }`}
+                  >
+                    <IconComponent className="w-4 h-4 mr-2" />
+                    {item.label}
+                  </button>
+                )
+              })}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="md:hidden flex-1 flex justify-end">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
